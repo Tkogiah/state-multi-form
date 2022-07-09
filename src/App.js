@@ -1,25 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import LeftForm from './LeftForm';
+import RightImage from './RightImage';
+import { useState } from 'react';
 
-function App() {
+
+export default function App() {
+  const[currentState, setCurrentState] = useState(0)
+  const formInformation = [
+    {title:'Apply to work with our agency'},
+    {title:'What\'s your budget?'},
+    {title:'Anything else we should know?'},
+    {title:'Thank you!'}
+    ]
+  console.log(currentState)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LeftForm 
+        heading={formInformation[currentState].title}
+        next={() => {currentState != 3 && setCurrentState(currentState + 1)}}
+        state={currentState}
+      />
+      <RightImage imageNumber={currentState + 1}/>
+      
     </div>
   );
 }
-
-export default App;

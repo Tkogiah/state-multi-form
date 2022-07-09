@@ -1,0 +1,18 @@
+Index
+    App
+        state
+        object {
+            {title:'Apply to work with our agency', response:''},
+            {title:'What's your budget?', response:''},
+            {title:'Anything else we should know?', response:''},
+            {title:'Thank you!'}
+            };
+        left form component
+            title state 1-4
+            field state 1-3
+                1-email input => object{field.state.data}
+                2-button selection => object{field.state.data}
+                3-text input => object{field.state.data}
+            button state 1-3
+        right image component
+            state 1-4
