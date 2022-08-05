@@ -17,7 +17,7 @@ export default function App() {
     <div className="App">
       <LeftForm 
         heading={formInformation[currentState].title}
-        // eslint-disable-next-line
+        eslint-disable-next-line
         next={() => {currentState != 3 && setCurrentState(currentState + 1)}}
         state={currentState}
       />
