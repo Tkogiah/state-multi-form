@@ -18,7 +18,7 @@ export default function App() {
       <LeftForm 
         heading={formInformation[currentState].title}
         eslint-disable-next-line
-        next={() => {currentState != 3 && setCurrentState(currentState + 1)}}
+        next={() => {currentState < 3 && setCurrentState(currentState + 1)}}
         state={currentState}
       />
       <RightImage imageNumber={currentState + 1}/>
