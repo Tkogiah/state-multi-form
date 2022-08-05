@@ -17,7 +17,7 @@ export default function App() {
     <div className="App">
       <LeftForm 
         heading={formInformation[currentState].title}
-        next={() => {currentState != 3 && setCurrentState(currentState + 1)}}
+        next={() => {currentState !== 3 && setCurrentState(currentState + 1)}}
         state={currentState}
       />
       <RightImage imageNumber={currentState + 1}/>
